@@ -32,15 +32,7 @@ const filteredContracts = computed(() => {
         .filter(filterBySearch)
         .filter(filterBySupplier)
         .filter(filterByTerm)
-        .filter(filterByOrigin)
-        .sort((a, b) => {
-            if (sortBy.value) {
-                return String(a[sortBy.value]).localeCompare(
-                    String(b[sortBy.value])
-                );
-            }
-            return 0;
-        });
+        .filter(filterByOrigin);
 
     if (sortBy.value) {
         return sortContracts(
