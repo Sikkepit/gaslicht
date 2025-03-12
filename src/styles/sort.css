@@ -1,0 +1,23 @@
+.sort {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+
+    .sort__button {
+        background-color: var(--c-white);
+        color: var(--c-astronaut-800);
+        border: 1px solid var(--c-astronaut-800);
+        font-size: 0.75rem;
+        font-weight: 500;
+        padding: 0.25rem 0.5rem;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+
+        &.sort__button--active {
+            background-color: var(--c-astronaut-800);
+            color: var(--c-white);
+        }
+    }
+}

@@ -1,0 +1,30 @@
+button {
+    cursor: pointer;
+}
+
+.btn {
+    background-color: var(--c-astronaut-800);
+    color: var(--c-white);
+    padding: 0.5rem 1.25rem;
+    border-radius: 20px;
+    font-weight: 600;
+    border: 1px solid var(--c-astronaut-800);
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    box-shadow: var(--shadow-md);
+
+    &.btn--cta {
+        background-color: var(--c-maroon-900);
+        border-color: var(--c-maroon-900);
+        box-shadow:
+            0 10px 15px -3px rgb(0 0 0 / 0.1),
+            0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+
+    &.btn--outline {
+        background-color: var(--c-white);
+        border-color: var(--c-astronaut-800);
+        color: var(--c-astronaut-800);
+    }
+}

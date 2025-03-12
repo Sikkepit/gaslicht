@@ -1,0 +1,43 @@
+:root {
+    font-family: 'Source Sans 3', sans-serif;
+    --c-astronaut-50: #eefaff;
+    --c-astronaut-100: #dcf4ff;
+    --c-astronaut-200: #b2ecff;
+    --c-astronaut-300: #6ddeff;
+    --c-astronaut-400: #20ceff;
+    --c-astronaut-500: #00b8ff;
+    --c-astronaut-600: #0094df;
+    --c-astronaut-700: #0075b4;
+    --c-astronaut-800: #006394;
+    --c-astronaut-900: #004466;
+    --c-astronaut-950: #003451;
+    --c-conifer-50: #f4fce9;
+    --c-conifer-100: #e7f9ce;
+    --c-conifer-200: #cff3a3;
+    --c-conifer-300: #afe86e;
+    --c-conifer-400: #9dde55;
+    --c-conifer-500: #72c022;
+    --c-conifer-600: #579917;
+    --c-conifer-700: #437516;
+    --c-conifer-800: #375d17;
+    --c-conifer-900: #314f18;
+    --c-conifer-950: #172b08;
+    --c-maroon-50: #fff0f2;
+    --c-maroon-100: #ffe2e6;
+    --c-maroon-200: #ffc9d4;
+    --c-maroon-300: #ff9db1;
+    --c-maroon-400: #ff6687;
+    --c-maroon-500: #ff3062;
+    --c-maroon-600: #f10d4e;
+    --c-maroon-700: #c50440;
+    --c-maroon-800: #aa073f;
+    --c-maroon-900: #910a3c;
+    --c-maroon-950: #52001c;
+
+    --c-white: #ffffff;
+    --c-black: #172b08;
+    --shadow-md: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    --br-sm: 6px;
+    --br-lg: 12px;
+}

@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+@import './styles/variables.css';
+@import './styles/global.css';
+@import './styles/forms.css';
+@import './styles/button.css';
+@import './styles/icon.css';
+
+/* Components */
+@import './styles/overview.css';
+@import './styles/card.css';
+@import './styles/filter.css';
+@import './styles/sort.css';

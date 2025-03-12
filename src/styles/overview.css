@@ -1,0 +1,6 @@
+.overview {
+    .overview__card-wrapper {
+        display: grid;
+        gap: 1.25rem;
+    }
+}

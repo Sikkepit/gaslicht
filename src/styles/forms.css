@@ -1,0 +1,23 @@
+input {
+    border: 1px solid var(--c-astronaut-800);
+    border-radius: var(--br-sm);
+    padding: 0.5rem 1rem;
+    background-color: white;
+    accent-color: var(--c-astronaut-800);
+}
+
+input[type='search'] {
+    padding-inline-end: 2.5rem;
+}
+
+.searchbar {
+    .icon {
+        position: absolute;
+        inset-inline-end: 16px;
+        inset-block-start: 13px;
+    }
+}
+
+label {
+    cursor: pointer;
+}
