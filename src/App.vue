@@ -111,7 +111,7 @@ function filterByOrigin(contract: Contract) {
 }
 
 function getUniqueValues(id: keyof Contract) {
-    return [...new Set(contracts.map((contract) => contract[id]))];
+    return [...new Set(contracts.map((contract) => contract[id]))].sort();
 }
 
 function clearFilters() {
@@ -140,7 +140,7 @@ function clearFilters() {
                 <FilterButton :options="[
                     ...getUniqueValues('electricity_sustainability'),
                     ...getUniqueValues('gas_sustainability')
-                ]" ref="originFilter">Duurzaamheid</FilterButton>
+                ].sort()" ref="originFilter">Duurzaamheid</FilterButton>
 
                 <FilterButton :options="getUniqueValues('supplier')" ref="supplierFilter">Leverancier</FilterButton>
 
