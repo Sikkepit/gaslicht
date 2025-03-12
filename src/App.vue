@@ -137,46 +137,29 @@ function clearFilters() {
 
         <div class="flex mt-6 mb-4">
             <div class="flex gap-1 items-center flex-wrap">
-                <FilterButton
-                    :options="[
-                        ...getUniqueValues('electricity_sustainability'),
-                        ...getUniqueValues('gas_sustainability')
-                    ]"
-                    ref="originFilter"
-                    >Duurzaamheid</FilterButton
-                >
+                <FilterButton :options="[
+                    ...getUniqueValues('electricity_sustainability'),
+                    ...getUniqueValues('gas_sustainability')
+                ]" ref="originFilter">Duurzaamheid</FilterButton>
 
-                <FilterButton
-                    :options="getUniqueValues('supplier')"
-                    ref="supplierFilter"
-                    >Leverancier</FilterButton
-                >
+                <FilterButton :options="getUniqueValues('supplier')" ref="supplierFilter">Leverancier</FilterButton>
 
-                <FilterButton
-                    :options="getUniqueValues('term')"
-                    ref="termFilter"
-                    >Termijn</FilterButton
-                >
+                <FilterButton :options="getUniqueValues('term')" ref="termFilter">Termijn</FilterButton>
 
-                <ClearFilterButton
-                    v-if="
-                        supplierFilter?.selectedOptions.length ||
-                        originFilter?.selectedOptions.length ||
-                        termFilter?.selectedOptions.length
-                    "
-                    @clear-filters="clearFilters"
-                />
+                <ClearFilterButton v-if="
+                    supplierFilter?.selectedOptions.length ||
+                    originFilter?.selectedOptions.length ||
+                    termFilter?.selectedOptions.length
+                " @clear-filters="clearFilters" />
             </div>
 
-            <SearchBar
-                ref="searchBar"
-                @update-query="(query) => (searchValue = query)"
-            />
+            <SearchBar ref="searchBar" @update-query="(query) => (searchValue = query)" />
         </div>
         <div class="sort">
             Sorteer op:
 
             <SortButton id="rank" initialSort> Prijs </SortButton>
+            <SortButton id="score" :initialSort="false">Beoordeling</SortButton>
             <SortButton id="discount" :initialSort="false">
                 Korting
             </SortButton>
@@ -184,21 +167,12 @@ function clearFilters() {
         </div>
 
         <div class="overview__card-wrapper">
-            <SupplierCard
-                v-for="contract in filteredContracts"
-                :contract="contract"
-            />
+            <SupplierCard v-for="contract in filteredContracts" :contract="contract" />
 
-            <div
-                v-if="filteredContracts.length === 0"
-                class="card text-center mt-8"
-            >
+            <div v-if="filteredContracts.length === 0" class="card text-center mt-8">
                 <span>Er zijn geen resultaten gevonden. </span>
 
-                <button
-                    class="underline text-[var(--c-astronaut-800)] cursor-pointer"
-                    @click="clearFilters"
-                >
+                <button class="underline text-[var(--c-astronaut-800)] cursor-pointer" @click="clearFilters">
                     <span>Wis alle filters</span>
                 </button>
             </div>
