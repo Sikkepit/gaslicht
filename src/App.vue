@@ -147,14 +147,18 @@ function clearFilters() {
 
             <SearchBar ref="searchBar" @update-query="(query) => (searchValue = query)" />
         </div>
+
         <div class="sort">
             Sorteer op:
 
             <SortButton id="rank" initialSort> Prijs </SortButton>
+
             <SortButton id="score" :initialSort="false">Beoordeling</SortButton>
+
             <SortButton id="discount" :initialSort="false">
                 Korting
             </SortButton>
+
             <SortButton id="supplier" initialSort> Leverancier </SortButton>
         </div>
 

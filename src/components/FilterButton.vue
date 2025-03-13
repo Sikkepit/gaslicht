@@ -37,40 +37,23 @@ onUnmounted(() => {
             <span>
                 <slot />
             </span>
-            <span
-                v-if="selectedOptions.length > 0"
-                class="active-filter-count"
-                >{{ selectedOptions.length }}</span
-            >
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-                class="icon size-3"
-                :class="{ 'icon--rotate': open }"
-            >
+
+            <span v-if="selectedOptions.length > 0" class="active-filter-count">
+                {{ selectedOptions.length }}
+            </span>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon size-3"
+                :class="{ 'icon--rotate': open }">
                 <path
-                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
-                />
+                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
             </svg>
         </button>
 
-        <div
-            class="filter__dropdown"
-            :class="{ 'filter__dropdown--open': open }"
-            :inert="!open"
-        >
+        <div class="filter__dropdown" :class="{ 'filter__dropdown--open': open }" :inert="!open">
             <div class="overflow-hidden">
                 <div class="filter__list-wrapper">
-                    <label
-                        v-for="option in options"
-                        :key="option"
-                        class="flex items-center gap-2"
-                    >
-                        <input
-                            type="checkbox"
-                            v-model="selectedOptions"
-                            :value="option"
-                        />{{ option }}
+                    <label v-for="option in options" :key="option" class="flex items-center gap-2">
+                        <input type="checkbox" v-model="selectedOptions" :value="option" />{{ option }}
                     </label>
                 </div>
             </div>

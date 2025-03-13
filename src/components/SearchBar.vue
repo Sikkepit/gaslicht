@@ -16,18 +16,10 @@ defineExpose({
 </script>
 <template>
     <div class="searchbar relative ml-auto">
-        <input
-            type="search"
-            v-model="searchValue"
-            placeholder="Zoek op leverancier of productnaam..."
-            class="w-84"
-            @input="emit('updateQuery', searchValue)"
-        />
-        <IconComponent
-            v-if="searchValue === ''"
-            variant="search"
-            class="size-4"
-        />
+        <input type="search" v-model="searchValue" placeholder="Zoek op leverancier of productnaam..." class="w-84"
+            @input="emit('updateQuery', searchValue)" />
+
+        <IconComponent v-if="searchValue === ''" variant="search" class="size-4" />
 
         <button v-else @click="reset">
             <IconComponent variant="xmark" class="size-4" />
